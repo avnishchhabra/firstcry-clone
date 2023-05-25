@@ -2,9 +2,14 @@ import {
   USER_LOGIN_FAILURE,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
+  USER_LOGOUT,
 } from "./actiontypes";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
+
+export const logoutAction = () => {
+  return { type: USER_LOGOUT };
+};
 
 export const loginRequestAction = () => {
   return { type: USER_LOGIN_REQUEST };
@@ -67,4 +72,12 @@ const checkdata = (data, enteredemail) => {
       return;
     }
   });
+};
+
+export const logout = () => {
+  return (dispatch) => {
+    console.log("logout call");
+    localStorage.removeItem("user");
+    return dispatch(logoutAction());
+  };
 };

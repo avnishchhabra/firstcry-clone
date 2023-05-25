@@ -2,6 +2,7 @@ import {
   USER_LOGIN_FAILURE,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
+  USER_LOGOUT
 } from "./actiontypes";
 
 const initalState = {
@@ -20,6 +21,9 @@ const Reducer = (state = initalState, { type }) => {
     case USER_LOGIN_FAILURE:
       saveData("isAuth", false);
       return { ...state, isLoading: false, isError: true, isAuth: false };
+    case USER_LOGOUT:
+      saveData("isAuth", false);
+      return { ...state, isLoading: false };
     default:
       return state;
   }

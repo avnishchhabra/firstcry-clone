@@ -26,6 +26,7 @@ import f2 from "../../assets/fashion2.jpeg"
 import f3 from "../../assets/fashion3.jpeg"
 import ethnic from "../../assets/ethnic.jpeg"
 import party from "../../assets/party.jpeg"
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -67,6 +68,7 @@ const items = [
 ];
 
 const HomePage = () => {
+  const navigate = useNavigate()
   return (
     <div className="bib">
       <div className="mainPage">
@@ -99,25 +101,25 @@ const HomePage = () => {
         </CardWrapper>
         <img src={summerSale} />
         <div>
-            <img src={summerOne} />
-            <img src={summerTwo} />
-            <img src={summerThree} />
-            <img src={summerFour} />
+            <img onClick={() => navigate('product')} src={summerOne} />
+            <img onClick={() => navigate('product')} src={summerTwo} />
+            <img onClick={() => navigate('product')} src={summerThree} />
+            <img onClick={() => navigate('product')} src={summerFour} />
         </div>
         <div style={{display: 'flex', overflowX: 'hidden'}}>
-            <img src={baby1} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby2} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby3} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby4} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby5} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby6} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby7} style={{ maxWidth: '100%', height: 'auto' }} />
-            <img src={baby8} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby1} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby2} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby3} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby4} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby5} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby6} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby7} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img onClick={() => navigate('product')} src={baby8} style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
         <div>
-            <img src={f1} />
-            <img src={f2} />
-            <img src={f3} />
+            <img onClick={() => navigate('product')} src={f1} />
+            <img onClick={() => navigate('product')} src={f2} />
+            <img onClick={() => navigate('product')} src={f3} />
         </div>
         {/* <div style={{display: 'flex'}}>
             <img src={ethnic} />

@@ -69,28 +69,18 @@ const Signup = () => {
       validateemail(email) &&
       validatemobile(mobile);
     setisLoading(true);
+    console.log("isValidated", isValidated);
     if (isValidated) {
       let postdata = { name, email, password, mobile, child: [], address: [] };
-      let res = await fetch("https://burgundy-cow-kit.cyclic.app/Users");
-      let userdata = await res.json();
-      let result = false;
-      userdata.forEach((el) => {
-        if (el.email == email) {
-          result = true;
-          return;
-        }
-      });
-      if (result == false) {
-        let response = await fetch(
-          "https://burgundy-cow-kit.cyclic.app/Users",
-          {
-            method: "POST",
-            body: JSON.stringify(postdata),
-            headers: {
-              "Content-type": "application/json",
-            },
-          }
-        );
+      let usersData = localStorage.getItem("users");
+      const users = JSON.parse(usersData);
+      console.log("users", users);
+
+      if (!users?.hasOwnProperty(email)) {
+        if (users) {
+          localStorage.setItem("users", JSON.stringify([...users, postdata]));
+        } else localStorage.setItem("users", JSON.stringify([postdata]));
+
         setisLoading(false);
         toast({
           title: `Successfully registered`,

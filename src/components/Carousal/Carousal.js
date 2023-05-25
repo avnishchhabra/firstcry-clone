@@ -8,6 +8,7 @@ import Three from "../../assets/carousal/c3.jpeg"
 import Four from "../../assets/carousal/c4.jpeg"
 import Five from "../../assets/carousal/c5.jpeg"
 import Six from "../../assets/carousal/c6.jpeg"
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -37,6 +38,7 @@ const items = [
 ];
 
 const Carousal = () => {
+  const navigate = useNavigate()
   return (
     <Carousel>
       {items.map(({ id, path }) => (
@@ -45,6 +47,7 @@ const Carousal = () => {
             className="carousal1"
             src={path}
             alt="Slide"
+            onClick={() => navigate('product')}
           />
         </Carousel.Item>
       ))}

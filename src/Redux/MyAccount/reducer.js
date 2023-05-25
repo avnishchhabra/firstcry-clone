@@ -1,8 +1,8 @@
 import * as types from "./actionType";
 
 const initialState = {
-  users: [],
-  user: {},
+  users: JSON.parse(localStorage.getItem('users')),
+  user: JSON.parse(localStorage.getItem('user')),
   loading: true,
 };
 

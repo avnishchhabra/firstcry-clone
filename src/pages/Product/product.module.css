@@ -1,0 +1,37 @@
+.productContainer {
+    padding: 30px 80px;
+    display: flex;
+}
+
+.imagesContainer {
+    flex: 45%;
+    display: flex;
+    gap: 15px;
+}
+
+.descriptionContainer {
+    flex: 55%;
+}
+
+.imageCol {
+    padding: 8px;
+    height: 90px;
+    width: 80px;
+    margin: 5px 0;
+}
+
+.hoverEffect {
+    border: 1px solid orange;
+    scale: 1.1;
+}
+
+.addToCartBtn {
+    background-color: #FF7043;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+
+.addToCartBtn:hover {
+    scale: 1.05;
+}
