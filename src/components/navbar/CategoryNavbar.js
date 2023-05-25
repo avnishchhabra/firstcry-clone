@@ -78,6 +78,7 @@ const DesktopNav = () => {
                 <Link
                   p={2}
                   href={navItem.href ?? "/product"}
+                  fontWeight="semibold"
                   color={linkColor}
                   _hover={{
                     textDecoration: "none",
