@@ -60,6 +60,8 @@ const Product = () => {
         {/* right */}
         <div className={styles.descriptionContainer}>
             Product Details to be added here...
+            <br />
+            I took only one product for test purpose
         </div>
     </div>
   )

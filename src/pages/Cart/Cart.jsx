@@ -22,7 +22,8 @@ export default function Cart() {
     localStorage.setItem("cartdata", JSON.stringify(updatedData));
     window.location.reload();
   };
-  let cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
+  // let cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
+  const cartdata = useSelector(state => state.Cart.cartdata)
   let shortlistdata = JSON.parse(localStorage.getItem("shortlistdata")) || [];
   useEffect(() => {
     let tempprice =
