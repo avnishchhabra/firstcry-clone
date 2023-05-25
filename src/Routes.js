@@ -3,6 +3,8 @@ import Carousal from "./components/Carousal/Carousal";
 import CategoryNavbar from "./components/navbar/CategoryNavbar";
 import Navbar from "./components/navbar/Navbar";
 import HomePage from "./pages/Home/HomePage";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +19,11 @@ export const router = createBrowserRouter([
       ),
     },
     {
-      path: "about",
-      element: <div>About</div>,
+      path: "login",
+      element: <Login />,
+    },
+    {
+      path: "signup",
+      element: <Signup />,
     },
   ]);
